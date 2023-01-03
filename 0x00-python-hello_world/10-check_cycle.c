@@ -7,16 +7,16 @@
   */
 int check_cycle(listint_t *list)
 {
-	listint_t *tmp, *head = list;
+	listint_t *tm;
 
 	if (list == NULL || list->next == NULL)
 		return (0);
 	tmp = list->next;
-	while(head != NULL && tmp->next != NULL)
+	while(list != NULL && tmp->next != NULL)
 	{
-		head = head->next;
+		list = head->next;
 		tmp = (tmp->next)->next;
-		if (list == tmp)
+		if (head == tmp)
 			return (1);
 	}
 	return (0);
