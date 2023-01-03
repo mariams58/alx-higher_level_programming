@@ -7,7 +7,7 @@
   */
 int check_cycle(listint_t *list)
 {
-	listint_t *tm;
+	listint_t *tmp, *head = list;
 
 	if (list == NULL || list->next == NULL)
 		return (0);
@@ -16,7 +16,7 @@ int check_cycle(listint_t *list)
 	{
 		list = head->next;
 		tmp = (tmp->next)->next;
-		if (head == tmp)
+		if (list == tmp)
 			return (1);
 	}
 	return (0);
