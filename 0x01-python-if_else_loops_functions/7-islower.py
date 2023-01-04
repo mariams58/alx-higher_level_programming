@@ -1,9 +1,9 @@
 #!/use/bin/python3
 
-def islower(c):
 
+def islower(c):
     test = ord(c)
-    if test > 94 or test < 91:
+    if test > 122 or test < 97:
         return(False)
     else:
         return(True)
