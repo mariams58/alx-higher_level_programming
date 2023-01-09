@@ -5,7 +5,7 @@ import sys
 def main():
     num_arg = len(sys.argv)
     if num_arg == 1:
-        print("{} arguments.".format(num_arg -1))
+        print("{} arguments.".format(num_arg - 1))
     elif num_arg > 1:
         if num_arg > 2:
             print("{} arguments:".format(num_arg - 1))
