@@ -2,10 +2,12 @@
 
 
 def no_c(my_string):
-    for i in my_string:
-        if i != 'c' or i 1= 'C':
-            print("{}".format(i), end='')
-    print()
+    n_str = ''
+    size = len(my_string)
+    for x in range(size):
+        if my_string[x] != 'c' and my_string[x] != 'C':
+            n_str = n_str + my_string[x]
+    return n_str
 
 
 if __name__ == "__no_c__":
