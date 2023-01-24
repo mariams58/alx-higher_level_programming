@@ -1,12 +1,13 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
+    num = 0
     try:
-        for item in mylist:
-            num += 1
         d_list = my_list[:x]
-        return x
-    except RangeError:
-        d_list = my_list[:num]
-        return num
-    print d_list
+        print(d_list)
+    except:
+        d_list = my_list[:-1]
+        print(d_list)
+    for item in d_list:
+        num += 1
+    return num
