@@ -11,7 +11,7 @@ def main():
     result = 0
     if items < 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-	exit(1)
+        exit(1)
     if sys.argv[2] not in op_list:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
