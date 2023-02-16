@@ -5,10 +5,11 @@ from calculator_1 import add, sub, mul, div
 
 def main():
     op_list = ['+', '-', '*', '/']
+    items = len(sys.argv)
     a = sys.argv[1]
     b = sys.argv[3]
     result = 0
-    if len(sys.argv) != 4:
+    if items < 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
 	exit(1)
     if sys.argv[2] not in op_list:
