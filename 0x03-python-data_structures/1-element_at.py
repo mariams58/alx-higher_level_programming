@@ -2,12 +2,10 @@
 
 
 def element_at(my_list, idx):
-    if idx < 0:
-        return None
-    elif idx > (len(mylist) - 1):
-        return None
-    else:
-        return my_list[idx]
+    if my_list:
+        if idx < 0 or idx > (len(my_list) - 1):
+            return None
+        return my_list[idx - 1]
 
 
 if __name__ == "__element_at__":
