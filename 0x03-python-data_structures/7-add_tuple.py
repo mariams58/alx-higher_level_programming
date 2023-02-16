@@ -4,6 +4,8 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     i = len(tuple_a)
     j = len(tuple_b)
+    x = 0
+    y = 0
     if tuple_a and tuple_b:
         if i == j:
             x = tuple_a[0] + tuple_b[0]
