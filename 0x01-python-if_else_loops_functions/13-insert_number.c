@@ -28,13 +28,11 @@ listint_t *insert_node(listint_t **head, int number)
 		{
 			new_node->n = number;
 			new_node->next = temp;
-			temp = new_node
+			temp = new_node;
 		}
 		*head = temp;
 	}
 	return (new_node);
 	free(new_node->next);
 	free(new_node);
-}
-	return (NULL);
 }
