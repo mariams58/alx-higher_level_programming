@@ -31,16 +31,16 @@ listint_t *insert_node(listint_t **head, int number)
 			free(new_node->next);
 			free(new_node);
 	}
-	while (*head != NULL)
+	while ((*head)->next != NULL)
 	{
 		tmp = (*head)->next;
 		if ((tmp->n > number) || number == (*head)->n)
 		{
 			new_node->next = (*head)->next;
-			tmp = new_node;
+			*head = new_node;
 			return (*head);
 		}
-		*head = tmp;
+		*head = ((*head)->next)->next;
 	}
 	if (number > (*head)->n)
 	{
