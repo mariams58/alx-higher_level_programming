@@ -31,23 +31,12 @@ listint_t *insert_node(listint_t **head, int number)
 			free(new_node->next);
 			free(new_node);
 	}
-	while ((*head)->next != NULL)
-	{
-		tmp = (*head)->next;
-		if ((tmp->n > number) || number == (*head)->n)
-		{
-			new_node->next = (*head)->next;
-			*head = new_node;
-			return (*head);
-		}
-		*head = ((*head)->next)->next;
-	}
-	if (number > (*head)->n)
-	{
-		new_node->next = NULL;
-		(*head)->next = new_node;
-	}
-	return (*head);
+	tmp = *head;
+	while (tmp->next != NULL && (tmp->next->n <  number) || tmp->next->n == number)
+		tmp = tmp->next;
+	new_node->next = tmp->next;
+	tmp->next = new_node;
+	return (tmp->next);
 	free(new_node->next);
 	free(new_node);
 }
