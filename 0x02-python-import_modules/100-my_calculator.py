@@ -8,7 +8,7 @@ def main():
     a = sys.argv[1]
     b = sys.argv[3]
     result = 0
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     if sys.argv[2] not in op_list:
         print("Unknown operator. Available operators: +, -, * and /")
