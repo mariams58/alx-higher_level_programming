@@ -33,10 +33,12 @@ listint_t *insert_node(listint_t **head, int number)
 			free(new_node);
 	}
 	for (i = 0; (*head)->n < number; i++)
-		;
+	{
+		*head = (*head)->next;
+	}
 	new_node = (*head)->next;
 	(*head)->next = new_node;
-	return (*head)->next;
+	return ((*head)->next);
 	free(new_node->next);
 	free(new_node);
 }
