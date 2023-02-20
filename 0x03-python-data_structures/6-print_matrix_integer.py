@@ -2,6 +2,7 @@
 
 
 def print_matrix_integer(matrix=[[]]):
+    i = 0
     for blk in matrix:
         for item in blk:
             i += 1

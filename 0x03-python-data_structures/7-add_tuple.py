@@ -9,10 +9,10 @@ def add_tuple(tuple_a=(), tuple_b=()):
     if i - j == 0:
         x = tuple_a[0] + tuple_b[0]
         y = tuple_a[1] + tuple_b[1]
-        if i - j < 0:
-            y = tuple_b[1]
-        if j - 1 < 0:
-            y = tuple_a[1]
+    if i - j < 0:
+        y = tuple_b[1]
+    if j - 1 < 0:
+        y = tuple_a[1]
     if i == 0:
         return(tuple_b)
     if j == 0:
