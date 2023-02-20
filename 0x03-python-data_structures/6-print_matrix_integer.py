@@ -4,7 +4,7 @@
 def print_matrix_integer(matrix=[[]]):
     for blk in matrix:
         for item in blk:
-            print("{:d}".format(item), end=' ')
+            print("{:d}".format(item), sep = ' ')
         print()
 
 
