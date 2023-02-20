@@ -6,9 +6,9 @@ def print_matrix_integer(matrix=[[]]):
     for blk in matrix:
         for item in blk:
             i += 1
-            print("{:d}".format(item))
+            print("{:d}".format(item), end='')
             if i < 3:
-                print(end=' ')
+                print(" ",end='')
         print()
 
 

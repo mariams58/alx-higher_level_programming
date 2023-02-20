@@ -6,10 +6,9 @@ def divisible_by_2(my_list=[]):
         new_list = my_list.copy()
         for num in new_list:
             if num % 2 ==  0:
-                return True
+                return (new_list, True)
             else:
-                return False
-        return(new_list)
+                return(new_list, False)
 
 
 if __name__ == "__divisible_by_2__":
