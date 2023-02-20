@@ -7,7 +7,7 @@ def multiple_returns(sentence):
         first = sentence[0]
         if len1 == 0:
             first = None
-        return(len1, sentence)
+        return(len1, first)
 
 
 if __name__ == " __multiple_sentence__":

@@ -6,7 +6,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     j = len(tuple_b)
     x = 0
     y = 0
-    if tuple_a and tuple_b:
+    if i - j == 0:
         x = tuple_a[0] + tuple_b[0]
         y = tuple_a[1] + tuple_b[1]
         if i - j < 0:
