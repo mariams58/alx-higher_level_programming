@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" This python script lists all states that starts
-with 'N' from the database hbtn_0e_0_usa
+""" This python script lists all states where name
+is the last argument passed from the cli and also prevent
+sql injection attack
 """
 import MySQLdb
 from sys import argv
@@ -13,7 +14,7 @@ if __name__ == "__main__":
     cursor = d_b.cursor()
     # executing the query using the corspr object an execute function
     cursor.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id")
+        "SELECT * FROM states WHERE name = %s ORDER BY id", (argv[4], ))
     # fetching and printing query result
     rows = cursor.fetchall()
     for row in rows:

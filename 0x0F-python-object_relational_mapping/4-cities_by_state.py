@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This python script lists all states from the database hbtn_0e_0_usa
+""" This python script lists all cities from the database hbtn_0e_4_usa
 """
 import MySQLdb
 from sys import argv
@@ -11,7 +11,9 @@ if __name__ == "__main__":
     # creating a cursor object
     cursor = conn.cursor()
     # executing the query using the corspr object an execute function
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute(
+        "SELECT cities.id, cities.name, states.name FROM cities \
+        INNER JOIN states ON states.id=cities.state_id")
     # fetching and printing query result
     lines = cursor.fetchall()
     for line in lines:
