@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" This Python script lists all State object from the
-hbtn_0e_6_usa database
+""" This Python script creates the State “California” with
+the City “San Francisco” from the database hbtn_0e_100_usa
 """
 from sys import argv
-from model_state import Base, State
+from relationship_state import Base, State
+from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -17,10 +18,14 @@ if __name__ == "__main__":
     # Configuring session maker
     Session = sessionmaker(bind=engine)
     session = Session()
-    state_obj = session.query(State).first()
-    if state_obj:
-        print(state_obj.id, state_obj.name, sep=": ")
-    else:
-        print("Nothing")
+    # Creating a new State and City Instance
+    state = State(name="California")
+    city = City(name="San Francisco")
+    state.cities.append(city)
+    # Adding the new City and State Object to the session
+    session.add(state)
+    session.add(city)
+    # Adding the new state object to the database
+    session.commit()
     # Closing session maker
     session.close()
