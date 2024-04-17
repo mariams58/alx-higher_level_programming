@@ -2,14 +2,14 @@
 """ State Class definition with declarative base instance
 """
 from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, String, Integer
+from model_state import Base, State
+from sqlalchemy import Column, String, Integer, ForeignKey
 
-Base = declarative_base()
 
-
-class State(Base):
-    """ State Class
+class City(Base):
+    """ City Class
     """
-    __tablename__ = "states"
+    __tablename__ = "cities"
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
