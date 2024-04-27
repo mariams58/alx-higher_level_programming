@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This script fetches https://alx-intranet.hbtn.io/status
+""" This scrip[t post an email to the given hostname from the cli args
 and prints respone body in a given format
 """
 import requests
