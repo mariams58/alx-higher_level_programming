@@ -2,6 +2,8 @@
 def uppercase(str):
     for i in range(0, len(str)):
         x = str[i]
-        if ord(x) > 96:
-            x = ord(x) - 32
+        x = ord(x) - 0
+        if x > 96:
+            x = x - 32
         print("{}".format(chr(x)), end='')
+    print()
