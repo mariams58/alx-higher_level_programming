@@ -4,7 +4,7 @@ if __name__ == "__main__":
     import sys
     num = len(sys.argv)
     if num <= 1:
-        print("0 arguments")
+        print("0 arguments.")
     else:
         if num > 2:
             print("{} arguments:".format(num - 1))
@@ -12,4 +12,4 @@ if __name__ == "__main__":
                 print("{}: {}".format(i, sys.argv[i]))
         else:
             print("{} argument:".format(num - 1))
-            print("{}:{}".format(num - 1, sys.argv[1]))
+            print("{}: {}".format(num - 1, sys.argv[1]))
