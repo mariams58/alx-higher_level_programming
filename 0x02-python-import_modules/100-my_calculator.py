@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     """Prints the sum of a and b"""
-    from sys import argv
+    from sys import argv, argc
     from calculator_1 import add, sub, mul, div
     x = len(argv)
     if argc != 4:
