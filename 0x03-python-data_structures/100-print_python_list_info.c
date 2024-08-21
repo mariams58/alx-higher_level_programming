@@ -13,10 +13,10 @@ void print_python_list_info(PyObject *p)
 		int i;
 		PyListObject *objs = (PyListObject *)p;
 
-		printf("[*] Size of the Python List = $lli\n", size);
+		printf("[*] Size of the Python List = %li\n", size);
 		printf("[*] Allocated = %li\n", objs->allocated);
 		for (i = 0; i < size; i++)
 		{
-				printf("Element %i: %s\n", i, Py_Type(objs->ob_item[i])->tp_name);
+				printf("Element %i: %s\n", i, Py_TYPE(objs->ob_item[i])->tp_name);
 		}
 }
